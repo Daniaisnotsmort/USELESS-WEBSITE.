@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="darkweb" content="darkweb">
+    <title>DARKWEB</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+    <div class="neon-text">
+        <div class="neon">
+            <h3>DARKWEB</h3>
+
+        </div>
+        <div class="creepyaudio">
+            <audio controls loop>
+                <source src="audio/the-hive-kevin-macleod-main-version-04-11-8440.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="glitch">
+            <img src="images/Hihj.gif" alt="glitch" height="200" width="600">
+        </div>
+    </div>
+    <div class="skull1">
+        <img src="images/XwI7.gif" alt="skull">
+    </div>
+
+
+    <div class="eye">
+
+        <div class="eyeball">
+
+        </div>
+
+
+        <div class="close">
+
+            <span> </span>
+
+        </div>
+
+    </div>
+    <div id="my-div"></div>
+    <button onclick="changeColor()">
+        THE EYE IS WATCHING YOU. THE EYE WANTS YOU TO MAKE THE BOX BLUE.
+    </button>
+
+    <div class="text">
+        <button onclick="popup()">
+            Dont click me
+        </button>
+        <button id="heading"></button>
+    </div>
+
+
+
+    <div id="popup" class="popup">
+
+        <div class="popup-content">
+
+            <span class="exit" onclick="closePopup()">&times;</span>
+
+            <img src="images/ghost.gif" alt="ghost">
+
+            <video width="320" height="240" controls autoplay>
+                <source src="videos/doll.mp4" type="video/mp4">
+            </video>
+
+            <img src="images/creepy" alt="creepyghost">
+
+        </div>
+    </div>
+
+    <script>
+
+        alert("play the audio. DONT STOP THE AUDIO NO MATTER WHAT");
+
+        function popup() {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        const para = document.getElementById("heading");
+
+        const texts = ["Dont click me too", "I said DONT CLICK IT.", "are you testing me?????", "sure you can test me", "I can see you :)"
+            , "And i know where you live hehe", "you think i'm lying?", "your ip is 131.36.55.108", "Did I actually scare you? HAHAHA.",
+            "This is why you should not trust anything in the darkweb", "unless...", "You want to die", "and also drugs are so expensive here"
+            , "so it's better to get them drugs from your local street druggies", "other than that, stay safe don't go on an actual darkweb LOL",
+            "WHY ARE YOU STILL HERE?"];
+
+        para.style.color = "red"
+        para.style.fontSize = "26px"
+
+        let currentIndex = 0;
+        para.textContent = texts[currentIndex];
+
+        para.addEventListener("click", function () {
+
+            currentIndex = (currentIndex + 1) % texts.length;
+
+
+            para.textContent = texts[currentIndex];
+        });
+
+        function changeColor() {
+            let div = document.getElementById("my-div");
+            if (div.style.backgroundColor === "blue") {
+                div.style.backgroundColor = "red";
+            } else {
+                div.style.backgroundColor = "blue";
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
